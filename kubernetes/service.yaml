@@ -1,0 +1,14 @@
+#service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: machines-client
+spec:
+  type: ClusterIP
+  selector:
+    app: machines-client
+  ports:
+    - port: 3000 # SERVICE exposed port
+      name: http # SERVICE port name
+      protocol: TCP # The protocol the SERVICE will listen to
+      targetPort: http # Port to forward to in the POD
