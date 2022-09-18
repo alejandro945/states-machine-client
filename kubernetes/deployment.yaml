@@ -1,5 +1,5 @@
 # client deployment.yaml
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: machines-client
@@ -25,5 +25,9 @@ spec:
               cpu: 250m
               memory: 256Mi
           ports:
+<<<<<<< HEAD
             - containerPort: 3000
+=======
+            - containerPort: 80
+>>>>>>> eb0eb0a (Fix: adding dockerignore file and nginx for server a static app from ingress cluster communacation :whale:)
               name: http
