@@ -13,7 +13,7 @@ export function generateColumns(alphabet, isMoore) {
     }
     //Moore extra column validation
     if (isMoore) {
-        columns[alphabet.length + 1] = { field: 'result', headerName: 'Respuesta', width: 180, editable: true }
+        columns[alphabet.length + 1] = { field: 'result', headerName: 'Respuesta', type:'number', width: 180, editable: true }
     }
     return columns
 }
