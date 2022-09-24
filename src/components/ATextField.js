@@ -1,9 +1,9 @@
 import React from 'react'
 import TextField from '@mui/material/TextField';
 
-const ATextField = ({handleChange, finite}) => {
+const ATextField = ({ name, label, handleChange, finite, type }) => {
   return (
-    <TextField fullWidth multiline rows={4}  label="Data" variant="outlined" value={finite} onChange={handleChange}/>
+    <TextField name={name} fullWidth label={label} type={type} variant="outlined" value={finite} onChange={handleChange} />
   )
 }
 
