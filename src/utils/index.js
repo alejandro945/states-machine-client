@@ -7,13 +7,13 @@
 export function generateColumns(alphabet, isMoore) {
     let columns = []
     //First Column by default
-    columns[0] = { field: 'state', width: 200 }
+    columns[0] = { field: 'States', width: 200 }
     for (let index = 1; index < alphabet.length + 1; index++) {
         columns[index] = { field: alphabet[index - 1].toString(), headerName: alphabet[index - 1], width: 180, editable: true };
     }
     //Moore extra column validation
     if (isMoore) {
-        columns[alphabet.length + 1] = { field: 'result', headerName: 'Respuesta', type:'number', width: 180, editable: true }
+        columns[alphabet.length + 1] = { field: 'S', headerName: 'Respuesta', type:'number', width: 180, editable: true }
     }
     return columns
 }

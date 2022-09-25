@@ -7,14 +7,16 @@ import { validateStringValue } from "../validation";
  * @param {[{}]} rows 
  * @returns {[]}
  */
-export const adapterFromClient = (rows) => {
+export const adapterFromClient = (rows,columns) => {
     let matrixFromClient = []
-    let i = 0;
+    matrixFromClient[0] = columns.map(column => {return column.field})
+    let i = 1;
     for (const row of rows) {
         matrixFromClient[i] = []
-        let j = 0;
+        matrixFromClient[i][0] = row.States
+        let j = 1;
         for (const [key, value] of Object.entries(row)) {
-            if (key !== 'id' && key !== 'state') {
+            if (key !== 'id' && key !== 'States') {
                 matrixFromClient[i][j] = validateStringValue(value)
                 j++
             }

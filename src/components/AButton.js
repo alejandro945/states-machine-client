@@ -3,19 +3,21 @@ import { useSnackbar } from 'notistack';
 import React from 'react'
 import { adapterFromClient } from '../adapater';
 import { validateMachineData } from '../validation';
+import { axios } from 'axios'
 
-const AButton = ({ dataTable }) => {
+const AButton = ({ dataTable, machineType }) => {
     const { enqueueSnackbar } = useSnackbar();
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if (validateMachineData(dataTable.rows)) {
-            console.log(adapterFromClient(dataTable.rows))
-            //axios.get('http://machineserver.d69fa166303d4cf4b8b6.eastus.aksapp.io/api/nodes')
+            const matrix = adapterFromClient(dataTable.rows, dataTable.columns);
+            const response = await axios.post('https://machines-server.herokuapp.com/api/minimize', { matrix: matrix, machineType: (machineType === 'Moore') })
+            console.log(response.data)
         } else {
             enqueueSnackbar('All data fields are required', { variant: 'warning' })
         }
     }
-    
+
     return (
         <Button onClick={handleSubmit} variant='contained' color='error' size='small' sx={{ textTransform: 'capitalize' }}>Enviar</Button>
     )

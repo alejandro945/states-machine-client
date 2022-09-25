@@ -56,7 +56,7 @@ function App() {
 
           <Box sx={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', mt: 2, mb: 4 }}>
             <Typography sx={{ typography: { xs: 'body1', sm: 'h6', md: 'h4' } }}>Autómata conexo y mínimo equivalente</Typography>
-            <AButton dataTable={dataTable}/>
+            <AButton machineType={machine.typeMachine} dataTable={dataTable}/>
           </Box>
 
           <Grid container spacing={2} sx={{ alignItems: 'center', mb: 8 }}>
