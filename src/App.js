@@ -96,17 +96,21 @@ function App() {
 
           </Grid>
 
-          <Typography variant='h5' sx={{ mb: 2 }}>{`${machine.typeMachine} machine related and minimized diagram`}</Typography>
+          {diagramData &&
+            <>
+              <Typography variant='h5' sx={{ mb: 2 }}>{`${machine.typeMachine} machine related and minimized diagram`}</Typography>
 
-          <Box sx={{ display: 'flex', justifyContent: 'center',alignItems:'center', width: '80%' }}>
-            {(diagramData !== '') && <Graphviz
-              dot={`
+              <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '80%' }}>
+                {(diagramData !== '') && <Graphviz
+                  dot={`
               digraph {
                 ${diagramData}
             }
-          `}
-            />}
-          </Box>
+            `}
+                />}
+              </Box>
+            </>
+          }
 
         </Container>
       </Box>

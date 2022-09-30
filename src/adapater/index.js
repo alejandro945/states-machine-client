@@ -33,7 +33,7 @@ export const adapterFromClient = (rows,columns) => {
 export const adapterFromServer = (dataFromServer) => {
     let isMoore = (dataFromServer[0].includes('S'))
     let diagramData = ''
-    for(let i = 1; i < dataFromServer[0].length -1; i++){
+    for(let i = 1; i < dataFromServer.length; i++){
         for(let j = 1; j < dataFromServer[0].length -(isMoore ? 1 : 0); j++){
             if(!isMoore){
                 diagramData += dataFromServer[i][0] + ' -> ' + dataFromServer[i][j].split(',')[0]  + `[label="${dataFromServer[0][j]},${dataFromServer[i][j].split(',')[1]}"];`
