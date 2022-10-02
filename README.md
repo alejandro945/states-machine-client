@@ -38,11 +38,19 @@ This application allows us to verify if an automatan is connected, and then find
 * Select if we are going to introduce a Mealy machine or Moore machine.
 * The alphabet.
 * The number of states.
-* Fill the table with all transitions and outputs.
+* Fill the table with all transitions and outputs. :bangbang: **Important** :bangbang: The cells of the table can not be in edit mode, because pressing the submit button will show an alert like this.\
+<img width="246" alt="Captura de Pantalla 2022-10-02 a la(s) 11 45 48 a m" src="https://user-images.githubusercontent.com/80568091/193465922-67be049a-1fcc-45b4-b203-730ae9cde5d3.png"></img>
 ### Capture of the app :arrow_right:
 <img width="1168" alt="Captura de Pantalla 2022-10-02 a la(s) 11 16 55 a m" src="https://user-images.githubusercontent.com/80568091/193464679-b1e3e407-740c-4622-90c4-6220ab69b2a2.png"></img>
 ### Output :heavy_check_mark:
 <img width="603" alt="Captura de Pantalla 2022-10-02 a la(s) 11 06 53 a m" src="https://user-images.githubusercontent.com/80568091/193464603-6de5bedc-d1f0-48dd-9709-f21cf8e04bb9.png"></img>
+
+# Tools used to create this proyect:
+* React - MaterialUI
+* Java
+* Spring
+* Docker
+* Kubernetes 
 
 
 
