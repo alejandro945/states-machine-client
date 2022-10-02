@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+<h1 align="center">:pencil: Minimize Finite State Machines :pencil:</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+##  A finite state machine consists of: :heavy_exclamation_mark:
 
-In the project directory, you can run:
+* Finite sets S, R y Q, where S is a finite input alphabet, R is a finite output alphabet and Q is a set of states.
+* A state transition function f that gives the next state of M in terms of the current state and the next input symbol.
+* An output function g that gives the next output symbol of M in terms of the current state and the next input symbol.
+* A predetermined initial state q(0) = q1, where q1 ∈ Q, in which M is placed prior to instant t = 0.
+<img width="773" alt="Captura de Pantalla 2022-10-02 a la(s) 10 35 39 a m" src="https://user-images.githubusercontent.com/80568091/193462509-80160483-21c1-42a4-b39e-bb08b622b2ff.png">
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Mealy Machine :books:
+### Definition:
+A transition assigned finite-state machine is 6−tuple where:
+* Q is a finite set of internal states
+* S is a finite input alphabet
+* R is a finite output alphabet
+* f is the state transition funcion f : Q × S −→ Q g is the output function g : Q × S −→ R
+* q1 ∈ Q is the initial state
+<img width="725" alt="Captura de Pantalla 2022-10-02 a la(s) 10 38 26 a m" src="https://user-images.githubusercontent.com/80568091/193462636-d7bb32ab-5c4e-4b98-be08-a3493298b3f5.png">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Moore Machine :books:
+### Definition
+A state assigned finite-state machine is 6−tuple donde:
+* Q is a finite set of internal states
+* S is a finite input alphabet
+* R is a finite output alphabet
+* f is a state transition functionf :Q×S−→Q h is an output function h : Q −→ R
+* q1 ∈ Q is the initial state
+<img width="676" alt="Captura de Pantalla 2022-10-02 a la(s) 10 40 45 a m" src="https://user-images.githubusercontent.com/80568091/193462763-9cf77720-ad69-4d1f-822f-9ec1e1c65184.png">
 
-### `npm test`
+# Application :white_check_mark:
+:link: Link: https://lively-mud-06c994510.1.azurestaticapps.net
+## Description
+This application allows us to verify if an automatan is connected, and then find its reduced machine (if it is the case).
+### The inputs we need:
+* Select if we are going to introduce a Mealy machine or Moore machine.
+* The alphabet.
+* The number of states.
+* Fill the table with all transitions and outputs.
+### Capture of the app :arrow_right:
+<img width="1168" alt="Captura de Pantalla 2022-10-02 a la(s) 11 16 55 a m" src="https://user-images.githubusercontent.com/80568091/193464679-b1e3e407-740c-4622-90c4-6220ab69b2a2.png"></img>
+### Output :heavy_check_mark:
+<img width="603" alt="Captura de Pantalla 2022-10-02 a la(s) 11 06 53 a m" src="https://user-images.githubusercontent.com/80568091/193464603-6de5bedc-d1f0-48dd-9709-f21cf8e04bb9.png"></img>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
